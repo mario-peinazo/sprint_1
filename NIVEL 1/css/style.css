@@ -1,0 +1,140 @@
+.main {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.alto {
+    height: 20px;
+}
+
+.espacio {
+    padding: 20px;
+}
+
+.contenedor {
+    background-color: black;
+    margin: 20px;
+}
+
+.flex-cont {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#cont1-caja1{
+    background-color: #2d4059;
+}
+
+.rojo {
+    background-color: #ea5454;
+    width: 10%;
+    flex-grow: 1;
+}
+.rojo:nth-child(2n) {
+    width: 60%;
+    margin: 0 20px;
+    }
+
+
+#cont1-caja2 {
+    background-color: #f07a40;
+}
+
+#contenedor1 .amarillo {
+    background-color: #ffd461;
+}
+
+#contenedor2 .amarillo {
+    background-color: #feea85;
+}
+
+#contenedor3 .amarillo {
+    background-color: #e6af2d;
+}
+
+#cont2-caja1 {
+    background-color: #4e4f6a;
+    flex-grow: 1;
+}
+
+.azul {
+    background-color: #1e6cb0;
+    width: 40%;
+    flex-grow: 1;
+}
+
+.azul:first-child, .azul:nth-child(3n) {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.azul:last-child {
+    background-color: #70a3c4;
+    width: 100%;
+}
+          
+#cont2-caja2 {
+    background-color: #f73f52;
+    margin-left: 20px;
+    width: 25%;
+    padding: 20px;
+}
+
+#cont2-caja2 .amarillo:first-child {
+    margin-bottom: 10px;
+}
+
+
+@media(max-width: 768px) {
+
+    #cont2-caja2 {
+        margin-left: 0px;
+        width: 100%;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    #contenedor2 {
+        background-color: #fdff06;
+    }
+}
+
+@media(max-width: 480px) {
+
+    .rojo:nth-child(2n) {
+        width: 100%;
+        margin: 20px 0px;
+    }
+
+    #contenedor2 {
+        background-color: #fee129;
+    }
+
+    #cont2-caja1 {
+        background-color: #0b506f;
+    }
+
+    .azul {
+        background-color: #62959c;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .azul:first-child, .azul:nth-child(3n) {
+        margin-right: 0px;
+    }
+
+    .azul:last-child {
+        background-color: #a3ddcb;
+        margin-bottom: 0px;
+    }
+
+    #cont2-caja2 {
+        background-color: #fd7b54;
+    }
+
+    #cont2-caja2 .amarillo {
+        background-color: #fdb36b;
+    }
+}

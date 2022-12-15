@@ -1,0 +1,194 @@
+.main {
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+.flex-cont {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#contenedor1 {
+    height: 380px;
+    background-image: url("../images/header.jpg");
+    background-position: 50% 52%;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cont1-caja1 {
+    width: 95%;
+    margin: 30px;
+    align-items: center;
+}
+
+.centro-nav {
+    width: 60%;
+}
+
+button {
+    font-size: 1.1em;
+    color: #4e4d4d;
+    background-color: transparent;
+    border: none;
+    padding: 2px;
+}
+
+button:hover {
+    background-color: #f6776a;
+    color: #000000;
+}
+
+#cont1-caja2 {
+    height: 35%;
+    width: 90%;
+    opacity:0.6;
+    background-color: #cecdcd;
+    color: #ee7300;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+#contenedor2 {
+    margin: 10px 0px;
+}
+
+#cont2-caja1 {
+    width: 75%;
+    background-color: #cbcbcb;
+    padding: 10px;
+}
+
+.azul {
+    width: 40%;
+    height: fit-content;
+    background-color: #f5faff;
+    padding: 10px;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.azul:first-child, .azul:nth-child(3n) {
+    margin-right: 20px;
+}
+
+.imagen-ficha {
+    height: 160px;
+    position: relative;
+    background-size: cover;
+    margin-bottom: 5px;
+}
+
+.img1 {
+    background-image: url(../images/sakura.jpg);
+}
+
+.img2 {
+    background-image: url(../images/comida.jpg);
+}
+
+.img3 {
+    background-image: url(../images/fuji.jpg);
+}
+
+.img4 {
+    background-image: url(../images/noche.jpg);
+}
+
+.fecha{
+    position: absolute;
+    bottom: -5%;
+    left: 2%;
+    color: yellow;
+    font-size: 0.8em;
+}
+
+.texto {
+    margin: 0px;
+    padding: 0px 5px 10px 5px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+h2 {
+    background-color: #f0786d;
+    color: white;
+    margin: 0px;
+    padding: 5px 0px 2px 2px;
+    font-size: 1.2em;
+}
+
+.azul p {
+    column-count: 2;
+} 
+
+#cont2-caja2 {
+    width: 15%;
+    background-color: #cbcbcb;
+    margin-left: 10px;
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+#contenedor3 p {
+    background-color: #f3f3f3;
+    color: #5b5a5a;
+    text-align: center;
+    padding: 10px;
+}
+
+#contenedor3 {
+    background-color: #cbcbcb;
+    padding: 0px 10px;
+}
+
+
+@media(max-width: 768px) {
+
+    #cont2-caja2 {
+        width: 100%;
+        margin-left: 0px;
+        padding: 20px;
+        margin-top: 10px;
+    }
+
+    #cont2-caja1 {
+        width: 100%;
+    }
+}
+
+@media(max-width: 480px) {
+
+    #contenedor1 {
+        background-position: 50% 48%;
+        height: 400px;
+    }
+
+    .centro-nav {
+        width: 100%;
+        justify-content: center;
+        gap: 10px 20px;
+    }
+
+    #cont1-caja1 {
+        justify-content: center;
+        gap: 10px;
+        margin: 10px;
+    }
+
+    .azul {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .azul:first-child, .azul:nth-child(3n) {
+        margin-right: 0px;
+    }
+}

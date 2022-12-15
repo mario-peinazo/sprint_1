@@ -1,0 +1,244 @@
+@keyframes moverDerecha {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes moverIzquierda {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes moverAbajo {
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    100%{
+        opacity: 0.6;
+        transform: translateY(0);
+    }
+}
+
+
+.main {
+    max-width: 1200px;
+    margin: 0px auto;
+    display: grid;
+    grid-template-areas: 
+        "header header header header header"
+        "section section section section aside"
+        "footer footer footer footer footer";
+    grid-gap: 10px;
+}
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    justify-items: center;
+}
+
+section {
+    grid-area: section;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+
+#contenedor1 {
+    height: 380px;
+    background-image: url("../images/header.jpg");
+    background-position: 50% 52%;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    animation: moverDerecha 1s ease-in;
+}
+
+.rrss{
+    animation: moverIzquierda 1s ease-in;
+}
+
+#cont1-caja1 {
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.centro-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    animation: moverAbajo 1s ease-in;
+}
+
+button {
+    font-size: 1.1em;
+    color: #4e4d4d;
+    background-color: transparent;
+    border: none;
+    padding: 5px
+}
+
+button:hover {
+    background-color: #f6776a;
+    color: #000000;
+}
+
+
+#cont1-caja2 {
+    width: 90%;
+    height: 53%;
+    opacity: 0.6;
+    background-color: #cecdcd;
+    color: #ee7300;
+    text-align: center;
+    font-size: 1.8em;
+    align-self: end;
+    animation: moverAbajo 1s ease-in;
+}
+
+#cont2-caja1 {
+    background-color: #cbcbcb;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 10px;
+}
+
+.azul {
+    height: fit-content;
+    background-color: #f5faff;
+    padding: 10px;
+}
+
+.imagen-ficha {
+    height: 160px;
+    position: relative;
+    background-size: cover;
+    margin-bottom: 5px;
+}
+
+.img1 {
+    background-image: url(../images/sakura.jpg);
+}
+
+.img2 {
+    background-image: url(../images/comida.jpg);
+}
+
+.img3 {
+    background-image: url(../images/fuji.jpg);
+}
+
+.img4 {
+    background-image: url(../images/noche.jpg);
+}
+
+.fecha{
+    position: absolute;
+    bottom: -5%;
+    left: 2%;
+    color: yellow;
+    font-size: 0.8em;
+}
+
+.texto {
+    margin: 0px;
+    text-align: center;
+    grid-column-start: span 2;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+h2 {
+    background-color: #f0786d;
+    color: white;
+    margin: 0px;
+    padding: 5px 0px 2px 2px;
+    font-size: 1.2em;
+}
+
+.azul p {
+    column-count: 2;
+} 
+
+#cont2-caja2 {
+    background-color: #cbcbcb;
+    padding: 20px;
+    text-align: center;
+}
+
+#contenedor3 p {
+    background-color: #f3f3f3;
+    color: #5b5a5a;
+    text-align: center;
+    padding: 10px;
+}
+
+#contenedor3 {
+    background-color: #cbcbcb;
+    padding: 0px 10px;
+}
+
+
+@media(max-width: 768px) {
+
+    .main {
+        grid-template-areas: 
+            "header"
+            "section"
+            "aside"
+            "footer";
+    }
+
+    .azul p {
+        column-count: 1;
+    } 
+}
+
+@media(max-width: 480px) {
+
+    .azul {
+        grid-column-start: 2 span;
+    }
+
+    #cont1-caja1 {
+        grid-template-columns: 1fr;
+    }
+
+    #cont1-caja2 {
+        height: auto;
+    }
+
+}
